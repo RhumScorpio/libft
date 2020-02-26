@@ -6,7 +6,7 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 16:30:17 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/26 16:40:13 by clesaffr         ###   ########.fr       */
+/*   Updated: 2020/02/26 22:34:10 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@ static char			**part_cases(char const *s)
 
 	if (!s)
 		return (NULL);
-	if (!(spl = malloc(sizeof(char *))))
+	if (!(spl = malloc(sizeof(char *) * 2)))
 		return (NULL);
 	if (!(spl[0] = malloc(sizeof(char))))
 		return (NULL);
-	spl[0] = NULL;
+	spl[0][0] = '\0';
+	spl[1] = NULL;
 	return (spl);
 }
 
