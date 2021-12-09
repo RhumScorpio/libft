@@ -6,7 +6,7 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 16:56:10 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/24 21:11:11 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:23:48 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ char	*ft_itoa(int n)
 		size++;
 		nbr /= 10;
 	}
-	if (!(str = malloc(sizeof(char) * (size + 1))))
+	str = malloc(sizeof(char) * (size + 1));
+	if (!str)
 		return (NULL);
-	return (str = ft_itoa_int(n, str, size));
+	return (ft_itoa_int(n, str, size));
 }

@@ -6,7 +6,7 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 22:36:48 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/24 15:50:06 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:22:22 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	unsigned int nbtest;
+	unsigned int	nbtest;
 
 	if (nb < 0)
 	{

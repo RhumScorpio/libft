@@ -6,11 +6,11 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 02:10:12 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/24 23:12:56 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:03:57 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	result;

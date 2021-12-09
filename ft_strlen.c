@@ -6,7 +6,7 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 00:57:09 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/22 11:19:26 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:32:45 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int	ft_strlen(const char *str)
 {
-	int c;
+	int	c;
 
 	c = 0;
-	while (*(str + c) != '\0')
-	{
+	while (str[c] != '\0')
 		c++;
-	}
 	return (c);
 }

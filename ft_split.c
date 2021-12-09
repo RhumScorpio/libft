@@ -6,28 +6,30 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 16:30:17 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/26 22:34:10 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/12/09 21:34:50 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char			**part_cases(char const *s)
+static char	**part_cases(char const *s)
 {
 	char			**spl;
 
 	if (!s)
 		return (NULL);
-	if (!(spl = malloc(sizeof(char *) * 2)))
+	spl = malloc(sizeof(char *) * 2);
+	if (!spl)
 		return (NULL);
-	if (!(spl[0] = malloc(sizeof(char))))
+	spl[0] = malloc(sizeof(char));
+	if (!spl[0])
 		return (NULL);
 	spl[0][0] = '\0';
 	spl[1] = NULL;
 	return (spl);
 }
 
-static char			**free_all(char **spl, unsigned int j)
+static char	**free_all(char **spl, unsigned int j)
 {
 	unsigned int	i;
 
@@ -62,7 +64,7 @@ static unsigned int	get_word_count(char const *s, char c)
 	return (count);
 }
 
-static char			*fill_strs(char const *s, char c, unsigned int *i)
+static char	*fill_strs(char const *s, char c, unsigned int *i)
 {
 	int		j;
 	char	*str;
@@ -70,7 +72,8 @@ static char			*fill_strs(char const *s, char c, unsigned int *i)
 	j = 0;
 	while (s[j + *i] && s[j + *i] != c)
 		j++;
-	if (!(str = malloc(sizeof(char) * (j + 1))))
+	str = malloc(sizeof(char) * (j + 1));
+	if (!str)
 		return (NULL);
 	j = 0;
 	while (s[*i] && s[*i] != c)
@@ -84,7 +87,7 @@ static char			*fill_strs(char const *s, char c, unsigned int *i)
 	return (str);
 }
 
-char				**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	unsigned int	wdct;
 	char			**spl;
@@ -94,7 +97,8 @@ char				**ft_split(char const *s, char c)
 	if (!s || s[0] == '\0')
 		return (part_cases(s));
 	wdct = get_word_count(s, c);
-	if (!(spl = malloc(sizeof(char *) * (wdct + 1))))
+	spl = malloc(sizeof(char *) * (wdct + 1));
+	if (!spl)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -103,8 +107,9 @@ char				**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		if (s[i])
-			if (!(spl[j] = fill_strs(s, c, &i)))
-				return (free_all(spl, j));
+			spl[j] = fill_strs(s, c, &i);
+		if (!spl[j])
+			return (free_all(spl, j));
 		j++;
 	}
 	spl[j] = NULL;

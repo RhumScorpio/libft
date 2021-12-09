@@ -6,7 +6,7 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 15:47:27 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/21 19:40:16 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:07:56 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if ((char)c == '\0')
-		return ((char*)&(s[i]));
+		return ((char *)&s[i]);
 	return (res);
 }

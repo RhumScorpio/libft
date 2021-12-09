@@ -6,7 +6,7 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 11:54:10 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/22 11:32:57 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:04:55 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strlcpy(char *dest, const char *src, unsigned int n)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	if (!dest || !src)

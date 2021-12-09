@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/15 19:13:33 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/21 18:04:42 by clesaffr         ###   ########.fr       */
+/*   Created: 2021/11/17 20:33:15 by clesaffr          #+#    #+#             */
+/*   Updated: 2021/11/17 20:33:18 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_bzero(void *src, int n)
 {
-	unsigned char *ptr;
+	unsigned char	*ptr;
 
 	ptr = (unsigned char *)src;
 	while (n--)

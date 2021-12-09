@@ -6,7 +6,7 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 15:43:03 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/24 22:57:16 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/11/17 20:22:48 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	if (!dest && !src)
 		return (NULL);
-	ptr = (unsigned char*)dest;
-	ptr2 = (unsigned char*)src;
+	ptr = (unsigned char *)dest;
+	ptr2 = (unsigned char *)src;
 	i = 0;
 	if (ptr2 < ptr)
 		while (++i <= len)

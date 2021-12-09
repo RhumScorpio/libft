@@ -6,7 +6,7 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 15:13:45 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/26 16:51:26 by clesaffr         ###   ########.fr       */
+/*   Updated: 2021/12/08 03:28:56 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <sys/types.h>
+# include <sys/wait.h>
+# include <signal.h>
 
 void			*ft_bzero(void *src, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
@@ -55,5 +58,6 @@ void			ft_putstr_fd(const char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_putstr(char *str);
 
 #endif
