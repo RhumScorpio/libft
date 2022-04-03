@@ -54,6 +54,7 @@ all		: $(PATH_OBJS) $(NAME)
 $(NAME)	: $(F_OBJS) $(HEADER)
 			ar rc $(NAME) $(F_OBJS)
 			ranlib $(NAME)
+			mv $(NAME) ..
 
 $(PATH_OBJS) :
 				mkdir -p $(PATH_OBJS)
@@ -65,7 +66,6 @@ clean	:
 			rm -rf $(F_OBJS) $(PATH_OBJS)
 
 fclean	: clean
-			rm -f $(NAME)
 
 re		: fclean all
 
