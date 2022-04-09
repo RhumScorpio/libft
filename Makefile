@@ -54,18 +54,18 @@ all		: $(PATH_OBJS) $(NAME)
 $(NAME)	: $(F_OBJS) $(HEADER)
 			ar rc $(NAME) $(F_OBJS)
 			ranlib $(NAME)
-			mv $(NAME) ..
 
 $(PATH_OBJS) :
 				mkdir -p $(PATH_OBJS)
 
-$(PATH_OBJS)%.o		: $(SRCS)
+$(PATH_OBJS)%.o		: %.c
 						$(CC) $(CFLAGS) -c $< -o $@
 
 clean	:
 			rm -rf $(F_OBJS) $(PATH_OBJS)
 
 fclean	: clean
+			rm $(NAME)
 
 re		: fclean all
 
