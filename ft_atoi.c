@@ -6,9 +6,28 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 02:10:12 by clesaffr          #+#    #+#             */
-/*   Updated: 2021/11/17 20:03:57 by clesaffr         ###   ########.fr       */
+/*   Updated: 2022/06/18 21:02:50 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+static int	parsing_for_sign(const char *str, int *index)
+{
+	int	i;
+	int	sign;
+
+	i = 0;
+	sign = 1;
+	while (str[i] && (str[i] == ' ' || (str[i] >= 7 && str[i] <= 13)))
+		i++;
+	while (str[i] == 45 || str[i] == 43)
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	*index = i;
+	return (sign);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -16,15 +35,9 @@ int	ft_atoi(const char *str)
 	int	result;
 	int	i;
 
-	sign = 1;
 	result = 0;
 	i = 0;
-	while (str[i] && (str[i] == ' ' || (str[i] >= 7 && str[i] <= 13)))
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == 45 || str[i] == 43)
-		i++;
+	sign = parsing_for_sign(str, &i);
 	while (str[i] >= 48 && str[i] <= 57)
 	{
 		result = result * 10 + (str[i] - 48);
