@@ -39,6 +39,8 @@ SRCS	=	ft_atoi.c\
 			ft_strtrim.c\
 			ft_substr.c\
 			ft_tolower.c\
+			ft_size_of_doubletab.c\
+			ft_free_doubletab.c\
 			ft_toupper.c
 
 HEADER	= 	libft.h
