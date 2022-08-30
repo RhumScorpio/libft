@@ -41,9 +41,11 @@ SRCS	=	ft_atoi.c\
 			ft_tolower.c\
 			ft_size_of_doubletab.c\
 			ft_free_doubletab.c\
-			ft_toupper.c
+			ft_toupper.c\
+			ft_strndup.c\
+			get_next_line.c
 
-HEADER	= 	libft.h
+HEADER	= 	libft.h get_next_line.h
 
 OBJS	=	$(SRCS:.c=.o)
 
