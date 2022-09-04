@@ -6,21 +6,23 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 15:13:45 by clesaffr          #+#    #+#             */
-/*   Updated: 2022/08/30 22:29:42 by clesaffr         ###   ########.fr       */
+/*   Updated: 2022/09/04 22:55:00 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
+# include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include <unistd.h>
-# include <stdio.h>
 # include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 # include <sys/wait.h>
 # include <signal.h>
-# include <fcntl.h>
+# include <errno.h>
 
 void			*ft_bzero(void *src, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
@@ -42,8 +44,8 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_strncmp(char *s1, char *s2, size_t n);
-char			*ft_strchr(const char *p, int chr);
-char			*ft_strdup(char *src);
+int				ft_strchr(const char *s, int c);
+char			*ft_strdup(const char *src);
 int				ft_strlcpy(char *dest, const char *src, unsigned int n);
 char			*ft_strnchr(const char *p, int i, int chr);
 char			*ft_strrchr(const char *p, int chr);
@@ -63,6 +65,7 @@ void			ft_putnbr_fd(int n, int fd);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_putstr(char *str);
 char			*ft_strndup(char *src, int n);
-char			*ft_gnlstrjoin(const char *s1, const char *s2);
-
+char			*ft_gnlstrjoin(char *s1, char *s2);
+char			*ft_strcpy(char *dst, const char *src);
+char			*ft_strcat(char *s1, const char *s2);
 #endif

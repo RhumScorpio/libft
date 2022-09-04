@@ -6,22 +6,22 @@
 /*   By: clesaffr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 09:33:49 by clesaffr          #+#    #+#             */
-/*   Updated: 2020/02/22 15:51:40 by clesaffr         ###   ########.fr       */
+/*   Updated: 2022/09/04 22:54:32 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *p, int chr)
+int	ft_strchr(const char *s, int c)
 {
-	char	*str;
+	int	i;
 
-	str = (char *)p;
-	while (*str != chr)
+	i = 0;
+	while (s[i])
 	{
-		if (*str == '\0')
-			return (NULL);
-		++str;
+		if (s[i] == c)
+			return (i);
+		i++;
 	}
-	return (str);
+	return (-1);
 }

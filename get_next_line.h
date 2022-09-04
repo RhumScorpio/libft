@@ -6,24 +6,18 @@
 /*   By: marvin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/21 00:04:42 by marvin            #+#    #+#             */
-/*   Updated: 2022/08/28 20:18:37 by clesaffr         ###   ########.fr       */
+/*   Updated: 2022/09/04 22:35:47 by clesaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include <errno.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <sys/stat.h>
-# include <fcntl.h>
+# include "libft.h"
 
-typedef	struct	s_all
+typedef struct s_all
 {
-	char *str;
+	char	*str;
 }				t_all;
 
 int				get_next_line(int fd, char **line);

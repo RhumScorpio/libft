@@ -28,6 +28,8 @@ SRCS	=	ft_atoi.c\
 			ft_strchr.c\
 			ft_strdup.c\
 			ft_strjoin.c\
+			ft_strcpy.c\
+			ft_strcat.c\
 			ft_strlcat.c\
 			ft_strlcpy.c\
 			ft_strlen.c\
@@ -42,6 +44,7 @@ SRCS	=	ft_atoi.c\
 			ft_size_of_doubletab.c\
 			ft_free_doubletab.c\
 			ft_toupper.c\
+			ft_gnlstrjoin.c\
 			ft_strndup.c\
 			get_next_line.c
 
